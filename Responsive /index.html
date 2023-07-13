@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.6rem;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: auto;
+      border: 2px solid red;
+      padding: 20px;
+    }
+
+    .about {
+      display: flex;
+    }
+
+    .about > * {
+      flex-basis: 100%;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        border: 4px solid blue;
+        background-color: aquamarine;
+      }
+
+      .about-content {
+        background-color: red;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        border: 5px solid green;
+        background-color: yellow;
+      }
+
+      .about-content {
+        background-color: pink;
+      }
+
+      html {
+        font-size: 80%;
+      }
+
+      body {
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="about">
+        <div class="about-content">
+          <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore
+            illo atque doloremque sunt iusto error natus saepe e
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+            vitae eveniet iste numquam ad, magnam voluptatum reiciendis vel
+            nulla inventore ipsam voluptate nesciunt ab ipsum quaerat veritatis
+            modi saepe recusandae unde tempora maiores at deleniti. Laboriosam
+            quibusdam debitis pariatur dolores.
+          </p>
+        </div>
+        <div class="about-content-2">
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
+            eaque.
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+            placeat temporibus accusamus alias hic quam odio explicabo doloribus
+            aut inventore quibusdam iure ad soluta minus eaque nulla animi nam
+            possimus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

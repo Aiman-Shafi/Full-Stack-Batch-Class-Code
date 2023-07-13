@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- // CSS Position
+    // Pseudo Element
+    // Block Inline 
+    // Flexbox
+    // CSS animation  -->
+
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        /* max-width: 1000px; */
+        background-color: aquamarine;
+        height: 100vh;
+        font-size: 30px;
+        margin: auto;
+        position: relative;
+        background-image: url("https://images.unsplash.com/photo-1687380223135-2028215f3c6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+
+      .container::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: rgb(28, 209, 2);
+        background: linear-gradient(
+          158deg,
+          rgba(28, 209, 2, 1) 24%,
+          rgba(173, 187, 7, 1) 65%
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.6;
+        z-index: 1;
+      }
+
+      .box {
+        width: 700px;
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        /* left: 50%; */
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        z-index: 10;
+      }
+      /*
+      h1 {
+        font-size: 94px;
+        text-align: center;
+        position: relative;
+      }
+
+      h1::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      a {
+        font-size: 50px;
+      }
+
+      .home {
+        padding: 80px;
+        background-color: aqua;
+        display: inline-block;
+        margin-top: 100px;
+      }
+
+      span {
+        padding: 70px;
+        background: red;
+      } */
+
+      /* h2 {
+        position: relative;
+        font-size: 70px;
+      }
+
+      h2::first-line {
+        color: red;
+        cursor: pointer;
+        font-size: 190px;
+      } */
+
+      a:visited {
+        color: brown;
+      }
+
+      h2 {
+        position: relative;
+        display: inline-block;
+      }
+      h2::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 10px;
+        background: linear-gradient(60deg, red, blue);
+        top: 6%;
+        left: 10%;
+        /* border-radius: 100%; */
+        z-index: -1;
+      }
+
+      h2::after {
+        content: "hello";
+      }
+    </style>
+
+    <main>
+      <section class="container">
+        <!-- <div class="box">Box</div> -->
+        <!-- <h2>Lorem ipsum dolor sit.</h2>
+        <a href="https://www.similarweb.com/top-websites/" target="_blank"
+          >Visit the website</a
+        > -->
+        <div class="box">
+          <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #f4f5f9;
+  --primary-color: #6ca12c;
+  --heading-color: #333333;
+  --paragraph-color: #545454;
+  --white-color: #ffffff;
+  --roboto-font: "Roboto", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: var(--roboto-font);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* button styles  */
+
+.btn {
+  color: white;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  padding: 1rem 1.2rem;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 1.6rem;
+}
+
+/* fixed container  */
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/* header styles  */
+
+header {
+  background-color: var(--heading-color);
+  padding: 1rem 0;
+  color: var(--white-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+/* hero styles  */
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  position: relative;
+}
+
+.hero-content {
+  flex-basis: 60%;
+  padding-right: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  color: var(--heading-color);
+}
+
+.hero-content p {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  color: var(--paragraph-color);
+  margin-top: 1rem;
+}
+
+.hero-image {
+  flex-basis: 40%;
+}
+
+.hero-search {
+  background-color: var(--white-color);
+  box-shadow: rgba(128, 128, 128, 0.445) 0 5px 16px;
+  border-radius: 0.8rem;
+  margin-top: 3rem;
+  margin-right: 5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+.hero-search input {
+  max-width: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  border: none;
+}
+
+.search-btn {
+  display: flex;
+  border: none;
+  gap: 0.4rem;
+}
+
+.search-icon,
+.bx-search-alt {
+  width: 16px;
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    flex-direction: column;
+    height: 70vh;
+    padding: 5rem 1.8rem;
+  }
+
+  .hero-image {
+    text-align: center;
+  }
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    90.26deg,
+    #47c2ff 0.21%,
+    rgba(99, 203, 254, 0.65) 97.38%
+  );
+  border-radius: 100%;
+  opacity: 0.4;
+  -webkit-filter: blur(8px);
+  z-index: -1;
+}

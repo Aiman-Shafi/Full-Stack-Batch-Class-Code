@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .form-wrapper {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: rgb(243, 243, 243);
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        border-radius: 10px;
+      }
+
+      .form-img img {
+        max-width: 100%;
+        height: 200px;
+        /* width: 100%; */
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      form {
+        padding: 20px;
+      }
+
+      label {
+        display: block;
+        text-transform: capitalize;
+        margin-bottom: 6px;
+      }
+
+      input,
+      #country {
+        width: 100%;
+        height: 34px;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+      }
+
+      #country {
+        font-size: 8px;
+        padding: 0 10px;
+      }
+
+      #submit {
+        background-color: black;
+        color: white;
+        /* display: inline-block; */
+        width: 160px;
+        margin: auto;
+        padding: 10px;
+      }
+
+      .btn {
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      #submit:hover {
+        background-color: rgb(29, 29, 29);
+        cursor: pointer;
+      }
+    </style>
+    <main>
+      <section class="form-wrapper">
+        <div class="form-img">
+          <img src="fruits.jpg" alt="fruits" />
+        </div>
+        <form action="https://formspree.io/f/mbjvjqvj" method="POST">
+          <!-- your name  -->
+          <label for="name">Your Name</label>
+          <input type="text" placeholder="E.g John Doe" id="name" name="name" />
+          <br />
+          <br />
+          <!-- your email  -->
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            placeholder="E.g John Doe"
+            id="email"
+            name="email"
+          />
+          <br />
+          <br />
+          <!-- select country  -->
+          <label for="country">Select Country</label>
+          <select id="country" name="country">
+            <option value="">--Select Country--</option>
+            <option value="Bangldesh">Bangldesh</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="India">India</option>
+            <option value="Srilanka">Srilanka</option>
+          </select>
+          <!-- submit btn  -->
+          <br />
+          <br />
+          <label for="message">Your Message</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="8"
+            placeholder="Hi there, ...."
+          ></textarea>
+          <br />
+          <div class="btn">
+            <input type="submit" value="Send Message" id="submit" />
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

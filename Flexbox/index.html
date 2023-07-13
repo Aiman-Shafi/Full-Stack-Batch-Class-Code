@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,63 +7,93 @@
     <title>Document</title>
   </head>
   <style>
-    .container {
+    .section {
       width: 700px;
       border: 2px solid gray;
-      /* padding: 20px; */
       height: 600px;
       margin: auto;
       display: flex;
-      /* justify-content: flex-start; */
-      /* justify-content: flex-end; */
-      /* justify-content: space-evenly; */
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: 20px;
-      /* flex-direction: row; */
-      /* flex-direction: column; */
+    }
+    .container {
+      width: 700px;
+      /* border: 2px solid gray; */
+      /* height: 600px; */
+      /* margin: auto; */
+      display: flex;
+      flex-direction: row;
+      /* justify-content: center; */
+      /* justify-content: space-between; */
+      /* justify-content: space-evenly; */
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
     }
 
     .box {
-      /* width: 140px; */
-      height: 140px;
+      height: 120px;
+      /* width: 120px; */
       background-color: red;
       color: white;
       font-size: 20px;
       border: 1px solid lightblue;
     }
 
-    .container > * {
-      flex-basis: 100%;
-    }
-
     .box-1 {
+      background-color: red;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       /* flex-grow: 1; */
-      flex-basis: 100%;
+      order: 2;
+      flex-basis: 50%;
     }
 
     .box-2 {
       background-color: aquamarine;
       /* flex-grow: 2; */
-      flex-basis: 100%;
+      order: 3;
+      flex-basis: 50%;
     }
 
     .box-3 {
       background-color: green;
       /* flex-grow: 3; */
-      /* flex-basis: 300px; */
-      flex-basis: 100%;
+      width: 500px;
+      margin-top: 10px;
     }
-
-    /* .box-4 {
-      flex-basis: 120px;
-    } */
   </style>
   <body>
-    <div class="container">
-      <div class="box box-1">Box - 1</div>
-      <div class="box box-2">Box - 2</div>
-      <div class="box box-3">Box - 3</div>
-      <div class="box box-4">Box - 3</div>
+    <div class="section">
+      <div class="container">
+        <div class="box box-1">Box - 1</div>
+        <div class="box box-2">Box - 2</div>
+      </div>
+      <div>
+        <div class="box box-3">Box - 3</div>
+      </div>
     </div>
+    <svg
+      id="wave"
+      style="transform: rotate(0deg); transition: 0.3s"
+      viewBox="0 0 1440 390"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(243, 106, 62, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 179, 11, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path
+        style="transform: translate(0, 0px); opacity: 1"
+        fill="url(#sw-gradient-0)"
+        d="M0,0L21.8,32.5C43.6,65,87,130,131,175.5C174.5,221,218,247,262,266.5C305.5,286,349,299,393,260C436.4,221,480,130,524,91C567.3,52,611,65,655,117C698.2,169,742,260,785,247C829.1,234,873,117,916,104C960,91,1004,182,1047,240.5C1090.9,299,1135,325,1178,286C1221.8,247,1265,143,1309,110.5C1352.7,78,1396,117,1440,143C1483.6,169,1527,182,1571,156C1614.5,130,1658,65,1702,78C1745.5,91,1789,182,1833,182C1876.4,182,1920,91,1964,78C2007.3,65,2051,130,2095,162.5C2138.2,195,2182,195,2225,188.5C2269.1,182,2313,169,2356,169C2400,169,2444,182,2487,188.5C2530.9,195,2575,195,2618,201.5C2661.8,208,2705,221,2749,214.5C2792.7,208,2836,182,2880,201.5C2923.6,221,2967,286,3011,273C3054.5,260,3098,169,3120,123.5L3141.8,78L3141.8,390L3120,390C3098.2,390,3055,390,3011,390C2967.3,390,2924,390,2880,390C2836.4,390,2793,390,2749,390C2705.5,390,2662,390,2618,390C2574.5,390,2531,390,2487,390C2443.6,390,2400,390,2356,390C2312.7,390,2269,390,2225,390C2181.8,390,2138,390,2095,390C2050.9,390,2007,390,1964,390C1920,390,1876,390,1833,390C1789.1,390,1745,390,1702,390C1658.2,390,1615,390,1571,390C1527.3,390,1484,390,1440,390C1396.4,390,1353,390,1309,390C1265.5,390,1222,390,1178,390C1134.5,390,1091,390,1047,390C1003.6,390,960,390,916,390C872.7,390,829,390,785,390C741.8,390,698,390,655,390C610.9,390,567,390,524,390C480,390,436,390,393,390C349.1,390,305,390,262,390C218.2,390,175,390,131,390C87.3,390,44,390,22,390L0,390Z"
+      ></path>
+    </svg>
   </body>
-</html> -->
+</html>

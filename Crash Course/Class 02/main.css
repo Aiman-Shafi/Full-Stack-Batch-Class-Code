@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: aqua;
+  /* margin: 100px;
+  padding: 100px; */
+  /* margin-right: 120px;
+  padding-left: 200px; */
+  margin: 60px 20px 40px 100px;
+  /* padding: 100px; */
+  padding: 20px;
+  border: 10px groove red;
+  width: 600px;
+  height: 300px;
+  overflow: auto;
+  /* box-sizing: content-box; */
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a,
+span,
+button {
+  background-color: green;
+  padding: 30px;
+  /* margin: 100px 20px; */
+  display: block;
+  margin: 10px 0;
+}
+
+/* h1 {
+  background-color: red;
+  padding: 100px;
+}
+
+p {
+  background-color: green;
+}
+
+h2 {
+  background-color: red;
+} */
