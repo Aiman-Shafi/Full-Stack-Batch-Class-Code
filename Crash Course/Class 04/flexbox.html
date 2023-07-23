@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design</title>
+  </head>
+  <style>
+    .wrapper {
+      max-width: 800px;
+      height: 600px;
+      background-color: bisque;
+      border: 3px solid brown;
+      margin: auto;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: center;
+      /* flex-wrap: wrap; */
+      /* flex-wrap: nowrap; */
+    }
+
+    .box {
+      /* width: 120px; */
+      flex-basis: 120px;
+      height: 120px;
+      background-color: blue;
+      color: white;
+    }
+
+    .box-1 {
+      /* flex-grow: 1; */
+      /* justify-self: flex-start; */
+      /* flex-basis: 70%; */
+      /* flex-basis: 250px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* flex-shrink: 1; */
+      order: 2;
+    }
+
+    .box-2 {
+      background-color: red;
+      /* flex-grow: 1; */
+      /* flex-basis: 30%; */
+      order: 3;
+      /* align-self: flex-end; */
+    }
+
+    .box-3 {
+      background-color: green;
+      /* align-self: center; */
+      /* flex-grow: 2; */
+      /* flex-basis: 20%; */
+      order: 1;
+    }
+
+    /* .wrapper > * {
+      flex-basis: 100%;
+    } */
+  </style>
+  <body>
+    <main>
+      <section class="flex-container">
+        <div class="wrapper">
+          <div class="box box-1">Box 1</div>
+          <div class="box box-2">Box 2</div>
+          <div class="box box-3">Box 3</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

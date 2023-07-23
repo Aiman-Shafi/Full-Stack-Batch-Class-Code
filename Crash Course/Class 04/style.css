@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;800;900;&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --primary-color: #40a3f8;
+  --secondary-color: #3e3e3e;
+  --heading-color: #3d3d3f;
+  --text-color: #3d3d3fb2;
+  --nav-item: #6e5f5f;
+  --primary-font: "Roboto", sans-serif;
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--primary-font);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6.4rem;
+  color: var(--heading-color);
+}
+
+h2 {
+  font-size: 4.8rem;
+  color: var(--heading-color);
+}
+
+p {
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+a {
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 1160px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header Section  */
+
+header {
+  background-image: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo h2 {
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  align-items: center;
+}
+
+.menu-icon {
+  width: 4.5rem;
+  cursor: pointer;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+ul li a {
+  font-size: 1.6rem;
+  color: var(--nav-item);
+}
+
+/* Buttons  */
+
+/* 1 rem = 10px  */
+
+.btn-primary {
+  padding: 13px 28px;
+  font-size: 1.6rem;
+  line-height: 22px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  transition: all 0.5s ease;
+}
+
+.btn-secondary {
+  border: 2px solid var(--primary-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 14px 28px;
+  border-radius: 5px;
+  color: var(--primary-color);
+  line-height: 22px;
+  transition: background-color 0.5s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #40a3f8;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+
+.hero-wrapper {
+  display: flex;
+}
+
+.hero-content {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 4.8rem;
+  color: var(--heading-color);
+  line-height: 7rem;
+}
+
+.hero-content h2 span {
+  color: var(--primary-color);
+}
+
+.hero-content p {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.hero-img {
+  flex-basis: 60%;
+  text-align: right;
+}
+
+.cta {
+  margin-top: 3.8rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Steps Section  */
+
+.steps {
+  margin: 6.8rem 0;
+}
+
+.steps-wrapper {
+  display: flex;
+  gap: 100px;
+  text-align: center;
+}
+
+.step-heading h2 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 70px; /* 166.667% */
+  margin-bottom: 78px;
+}
+
+.step h4 {
+  color: var(--heading-color);
+  font-size: 20px;
+  font-weight: 00;
+  line-height: 32px;
+}
+
+.step p {
+  color: #909090;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}
+
+/* about section  */
+
+.about-wrapper {
+  display: flex;
+  gap: 5rem;
+}
+
+.about-wrapper > * {
+  flex-basis: 100%;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+  align-items: flex-start;
+}
+
+.about-feature {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.about-feature p {
+  color: var(--heading-color);
+}
+
+@media (max-width: 650px) {
+  /* header */
+  /* html {
+    font-size: 66%;
+  } */
+  header {
+    height: 100vh;
+  }
+  nav {
+    display: none;
+  }
+  .toggle-menu {
+    display: block;
+  }
+
+  /* hero section */
+  .hero-wrapper {
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+
+  .hero-content {
+    padding-top: 5rem;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    line-height: 5.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.9rem;
+    /* padding-top: 10rem; */
+  }
+
+  .cta {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  /* steps  */
+  .steps-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    max-width: 350px;
+  }
+
+  .step h4 {
+    font-size: 3rem;
+  }
+
+  .step p {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  /* about section  */
+  .about-wrapper {
+    flex-direction: column;
+    gap: 10rem;
+    padding: 3rem;
+  }
+}
