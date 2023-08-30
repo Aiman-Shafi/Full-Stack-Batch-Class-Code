@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-section {
+  background-image: url("../src/images/nature.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@layer components {
+  .hero-background {
+    @apply h-[90vh] before:w-full before:h-[90vh] before:bg-gradient-to-r before:from-indigo-500 before:via-purple-500 before:to-pink-500 before:absolute before:opacity-70;
+  }
+
+  .btn-purple {
+    @apply bg-purple-500 px-5 py-3 inline-block mt-3 text-white text-lg hover:bg-purple-900 duration-500 transition-all;
+  }
+}
+
+@layer utilities {
+  .text-green-500 {
+    color: pink;
+  }
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid</title>
+  </head>
+  <style>
+    .item {
+      background-color: blue;
+      padding: 10px;
+      color: white;
+    }
+    /*
+    .item:not(:nth-child(4)) {
+      background-color: red;
+    } */
+
+    /* .item:first-child {
+      background-color: red;
+      border: 2px solid black;
+    }
+
+    .item:last-child {
+      background-color: pink;
+      border: 3px solid saddlebrown;
+    } */
+
+    /* .item:nth-child(odd) {
+      background-color: black;
+      color: white;
+    }
+
+    .item:nth-child(even) {
+      background-color: antiquewhite;
+      color: black;
+    } */
+
+    /* .item:nth-child(5),
+    .item:nth-child(4) {
+      background-color: green;
+      border: 2px solid red;
+    } */
+    /* div:last-child {
+      background-color: red;
+    } */
+    .grid-container {
+      /* display: grid; */
+      /* grid-template-columns: 200px 300px 200px;
+      grid-template-rows: 200px 100px 100px 200px; */
+      /* grid-gap: 10px;
+      grid-template-areas:
+        "header header header"
+        "body body  sidebar"
+        "footer footer footer"; */
+    }
+
+    .item:nth-child(1) {
+      /* grid-area: header;
+      background-color: red;
+      height: 200px; */
+    }
+
+    .item:nth-child(1) {
+      /* grid-column-start: 1;
+      grid-column-end: 3; */
+      /* grid-column: 1 / 3; */
+      /* grid-row-start: 1;
+      grid-row-end: 3; */
+      /* grid-row: 2 / 4;
+      background-color: red; */
+    }
+
+    .item:nth-child(2) {
+      /* background-color: rgb(122, 92, 151); */
+      /* grid-row-start: 1;
+      grid-row-end: -1; */
+      /* grid-row: 1 / -1; */
+      /* grid-area: body;
+      height: 600px; */
+    }
+
+    /* .item:nth-child(3) {
+      background-color: green;
+      grid-area: sidebar;
+    }
+
+    .item:nth-child(4) {
+      background-color: black;
+      color: white;
+      grid-area: footer;
+      height: 200px;
+    } */
+
+    /* New Way  */
+    .item {
+      background-color: gainsboro;
+      height: 400px;
+    }
+
+    .item h2 {
+      color: black;
+    }
+
+    .item p {
+      color: gray;
+    }
+
+    .grid-container {
+      /* max-width: 1200px; */
+      border: 2px solid black;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+      justify-content: center;
+      grid-template-columns: repeat(3, 1fr);
+      /* grid-template-rows: repeat(5, 350px); */
+    }
+
+    .item:nth-child(1) {
+      /* grid-column: 1 / 3; */
+      background-color: aqua;
+    }
+
+    @media (min-width: 1400px) {
+      .grid-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+  <body>
+    <h2 class="text">CSS Grid</h2>
+    <section style="max-width: 1400px">
+      <div class="grid-container">
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+        <div class="item">
+          <h2>Lorem ipsum dolor sit</h2>
+          <p>
+            amet consectetur, adipisicing elit. Cupiditate magnam natus
+            accusantium, quibusdam commodi itaque nemo aspernatur saepe,
+            doloremque sequi laudantium iure dignissimos, laborum excepturi
+            reiciendis inventore eos. Vero, vitae.
+          </p>
+          <a href="">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

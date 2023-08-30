@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+            <div class="container">
+              <a class="navbar-brand" href="#">LOGO</a>
+              <button class="navbar-toggler d-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Off canvas  -->
+              <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">MENU <i class="bi bi-list"></i></button>
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-lg-none">
+                    <div>
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Home</a>
+                    </div>
+                </div>
+             </div>
+
+              <!-- nav items  -->
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Service
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a href="#" class=" btn btn-primary ms-3 mt-2">Learn More</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    See Offer
+  </button>
+
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+data-bs-title="Tooltip on top">
+    Tooltip on top
+  </button>
+
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Open this select menu</option>
+    <option value="1">
+    </option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New offer</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Use coupon <code>HELLO30</code> to get 50% off!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+    <section class="border border-primary m-5 rounded p-4">
+      <h2 class="text-dark">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam,
+        voluptate?
+      </h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore
+        quibusdam architecto odio ab non impedit esse dicta neque numquam culpa.
+        Dicta error maiores unde sint suscipit maxime natus iste excepturi.
+      </p>
+    </section>
+    <section class="container">
+      <h2 class="display-1 text-center p-5 m-5 border bg-light shadow-lg">
+        Faq
+      </h2>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Lorem, ipsum. 01
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <img
+                src="https://images.unsplash.com/photo-1682685797366-715d29e33f9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+              <p>
+                <strong>This is the first item's accordion body.</strong> It is
+                shown by default, until the collapse plugin adds the appropriate
+                classes that we use to style each element. These classes control
+                the overall appearance, as well as the showing and hiding via
+                CSS transitions. You can modify any of this with custom CSS or
+                overriding our default variables. It's also worth noting that
+                just about any HTML can go within the
+                <code>.accordion-body</code>, though the transition does limit
+                overflow.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Accordion Item #2
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Accordion Item #3
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              Accordion Item #4
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              Accordion Item #4
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success">
+        Notifications <span class="badge text-bg-secondary">4</span>
+      </button>
+    </section>
+
+    <section class="container mt-5" style="height: 100vh;">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1691338312403-e9f7f7984eeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60"
+              class="card-img-top"
+              alt="..."
+              style="height: 300px; object-fit: cover;"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+             <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-success">Learn More</a>
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <a href="#"><i class="bi bi-send-check"></i></a>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="height: 100vh;">
+        <div class="bg-info row row-cols-2 row-cols-md-3 row-cols-lg-4">
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+            <div class="box col">
+                <h2>Lorem ipsum dolor sit.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est impedit illum laboriosam commodi sunt esse, dolorum aperiam cumque dicta ullam?</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
+  </body>
+</html>

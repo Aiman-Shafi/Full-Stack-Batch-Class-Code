@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    button {
+      padding: 50px 100px;
+      color: white;
+      background-color: blueviolet;
+      border: none;
+      font-size: 40px;
+      clip-path: circle(141% at 0 0);
+      transition: all 0.5s ease-in-out;
+      position: relative;
+    }
+
+    button::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      /* background-color: red; */
+
+      content: "";
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    button:hover {
+      clip-path: circle(0.3% at 0 0);
+    }
+    div {
+      background-color: red;
+      display: inline-block;
+    }
+  </style>
+  <body>
+    <div>
+      <button>Learn More</button>
+    </div>
+  </body>
+</html>
