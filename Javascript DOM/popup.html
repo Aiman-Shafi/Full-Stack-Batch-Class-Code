@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Popup</title>
+  </head>
+  <body>
+    <style>
+      .overlay {
+        background-color: rgba(1, 1, 1, 0.623);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        /* display: flex; */
+      }
+
+      .popup {
+        background-color: white;
+        padding: 30px;
+        border: 5px dashed black;
+        position: relative;
+      }
+
+      .popup span {
+        color: rgb(107, 167, 16);
+      }
+
+      .close-icon svg {
+        width: 20px;
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+    <main>
+      <section class="popup-body">
+        <div>
+          <h2>We have a new offer! Check it out :)</h2>
+          <button id="btn">Check Offer!</button>
+        </div>
+      </section>
+      <div class="overlay">
+        <div class="popup">
+          <div class="close-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+          <h2>Use coupon <span>"Happy20"</span> to get 40% off!</h2>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // button click krle popup ta open hbe?
+      // overlay te click krle popup hide hoye jabe
+
+      //Selectors
+      const btn = document.getElementById("btn");
+      const closeIcon = document.querySelector(".close-icon");
+      const overlay = document.querySelector(".overlay");
+      //   const popupHeading = document.querySelector(".popup-body h2");
+
+      btn.addEventListener("click", () => {
+        overlay.style.display = "flex";
+      });
+
+      closeIcon.addEventListener("click", () => {
+        overlay.style.display = "none";
+      });
+
+      document.querySelector("body").addEventListener("click", (e) => {
+        // console.log(e.target.classList.value);
+        if (e.target.classList.value === "overlay") {
+          overlay.style.display = "none";
+        }
+      });
+
+      //   btn.style.backgroundColor = "red";
+      //   btn.style.color = "white";
+      //   btn.style.padding = "10px 20px";
+
+      //   popupHeading.style.backgroundColor = "green";
+      //   popupHeading.style.fontSize = "30px";
+    </script>
+  </body>
+</html>

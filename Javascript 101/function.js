@@ -151,4 +151,34 @@ function add(num1, num2) {
 // console.log(add(10, 20));
 
 let addition = add(20, 40);
-// console.log(addition);
+console.log(addition);
+
+// Arrow Function
+
+// const addNumbers1 = (a, b, c) => a + b + c;
+
+// function addNumbers(a, b, c) {
+//   let total = a + b + c;
+//   // return total;
+//   console.log(total);
+//   // return total;
+// }
+
+// console.log(addNumbers1(10, 10, 10));
+// console.log(addNumbers(10, 12, 2));
+// console.log(addNumbers(10, 22, 23));
+// addNumbers(10, 10, 10);
+
+// condition ? __________ : ___________
+// const greeting = (person) => {
+//   let name = person == true ? person : "stranger";
+//   return `Hello ${name}`;
+// };
+
+// const userAuthentication = (user) => {
+//   let auth = user ? "User is logged In" : "User is not logged In";
+//   return auth;
+// };
+
+// let user = userAuthentication();
+// console.log(user);

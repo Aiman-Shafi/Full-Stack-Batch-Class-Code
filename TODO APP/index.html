@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- 1. Input field -> input task 
+    2. Task Add, Task Edit, Task Remove -->
+  <body>
+    <style>
+      .content input {
+        border: none;
+      }
+
+      .content {
+        display: flex;
+        border: 1px solid gray;
+        padding: 10px;
+        max-width: 300px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+    </style>
+    <header>
+      <h2 id="text">TODO LIST APP</h2>
+      <form id="task-input-form">
+        <input
+          type="text"
+          placeholder="Write your first task..."
+          id="new-task-input"
+        />
+        <input type="submit" value="Add Task" id="task-submit" />
+      </form>
+    </header>
+
+    <main>
+      <section>
+        <h2>Tasks</h2>
+        <div class="tasks">
+          <!-- <div class="content">
+            <input type="text" value="a new task" readonly />
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

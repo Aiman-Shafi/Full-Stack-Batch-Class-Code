@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript DOM</title>
+  </head>
+  <body>
+    <h1 id="text">Javascript DOM</h1>
+    <div>
+      <h2>Calculation made easier!</h2>
+      <input type="number" id="num1" placeholder="Enter Value 1" />
+      <input type="number" id="num2" placeholder="Enter Value 2" />
+    </div>
+    <br />
+    <div>
+      <button id="add">ADD</button>
+      <button id="subtract">SUBTRACT</button>
+      <button id="division">DIVISION</button>
+      <button id="multiplication">MULTIPLICATION</button>
+    </div>
+
+    <div>
+      <div>
+        <h2>Result: <span id="result">0</span></h2>
+      </div>
+    </div>
+
+    <script>
+      let text = document.getElementById("text");
+      text.innerText = "Calculator :)";
+
+      let num1 = document.getElementById("num1");
+      let num2 = document.getElementById("num2");
+      //   console.log(parseInt(num2) + parseInt(num1));
+
+      let result = document.getElementById("result");
+      //   result.innerHTML = parseInt(num1) + parseInt(num2);
+
+      //   Addition
+      let addBtn = document.getElementById("add");
+      //   subtract
+      let subtractBtn = document.getElementById("subtract");
+      //   division
+      let divisionBtn = document.getElementById("division");
+      //  multiplication
+      let multiplicationBtn = document.getElementById("multiplication");
+
+      addBtn.addEventListener("click", () => {
+        result.innerHTML = parseInt(num1.value) + parseInt(num2.value);
+      });
+
+      subtractBtn.addEventListener("click", () => {
+        result.innerHTML = parseInt(num1.value) - parseInt(num2.value);
+      });
+
+      divisionBtn.addEventListener("click", () => {
+        result.innerHTML = parseInt(num1.value) / parseInt(num2.value);
+      });
+
+      multiplicationBtn.addEventListener("click", () => {
+        result.innerHTML = parseInt(num1.value) * parseInt(num2.value);
+      });
+
+      //   document.getElementById("text").innerText = "New Calculation";
+      //   text.innerHTML = "Calculator";
+      //   console.log(text);
+      //   let btn = document.getElementsByClassName("btn");
+      //   let btn1 = document.getElementsByTagName("button");
+      //   btn.innerText = "Hello";
+      //   console.log(btn);
+      //   console.log(btn1);
+      //   let result = document.querySelector(".btn");
+      //   console.log(result);
+    </script>
+  </body>
+</html>

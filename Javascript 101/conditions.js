@@ -1,10 +1,15 @@
-let isDarkMode = false;
+let isDarkMode = true;
 
-if (isDarkMode == true) {
-  console.log("Dark Mode is enabled!!");
-} else {
-  console.log("Dark Mode is disabled!");
-}
+// if (isDarkMode == true) {
+//   console.log("Dark Mode is enabled!!");
+// } else {
+//   console.log("Dark Mode is disabled!");
+// }
+
+// condition ? __________ : ___________
+isDarkMode === true
+  ? console.log("Dark Mode is enabled!")
+  : console.log("Dark Mode is disabled!");
 
 let isRaining = true;
 

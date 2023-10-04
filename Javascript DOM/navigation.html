@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-size: 30px;
+    }
+
+    * {
+      margin: 0;
+    }
+
+    header {
+      background-color: black;
+    }
+    .container {
+      max-width: 1280px;
+      margin: auto;
+      color: white;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      /* display: none; */
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+    }
+
+    .logo {
+      font-size: 36px;
+    }
+
+    button {
+      padding: 14px 20px;
+      background-color: white;
+      color: black;
+      border: none;
+      font-size: 28px;
+    }
+
+    .header-wrapper {
+      display: flex;
+      padding: 40px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-menu svg {
+      color: white;
+      width: 40px;
+      cursor: pointer;
+    }
+
+    .mobile-sidebar {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      background-color: rgb(12, 12, 12);
+      top: 0;
+      right: -300px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+
+    .mobile-sidebar ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 40px;
+    }
+
+    .mobile-sidebar a {
+      font-size: 40px;
+    }
+
+    .sidebar-btn {
+      display: block;
+      margin-left: 40px;
+      margin-top: 40px;
+    }
+
+    .close-icon svg {
+      width: 50px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+
+    .sidebar-btn {
+      display: none;
+    }
+
+    .close-icon {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .nav-open {
+      right: 0px;
+      transition: all 0.5s ease;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        display: none;
+        transition: all 0.5s ease;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-btn {
+        display: none;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container header-wrapper">
+        <div class="logo">LOGO</div>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Portfolio</a></li>
+          </ul>
+          <button class="sidebar-btn">Learn More</button>
+          <div class="close-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </nav>
+        <button class="nav-btn">Learn More</button>
+        <div class="mobile-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const mobileHamBuger = document.querySelector(".mobile-menu");
+      const nav = document.querySelector("nav");
+      const closeIcon = document.querySelector(".close-icon");
+      const sidebarBtn = document.querySelector(".sidebar-btn");
+
+      mobileHamBuger.addEventListener("click", () => {
+        // mobile-sidebar class ta add krte hbe!
+        nav.classList.add("mobile-sidebar");
+        nav.style.display = "block";
+        closeIcon.style.display = "block";
+        sidebarBtn.style.display = "block";
+        nav.classList.add("nav-open");
+        // console.log("class added!");
+      });
+
+      closeIcon.addEventListener("click", closeNav);
+
+      function closeNav() {
+        nav.classList.remove("mobile-sidebar");
+        nav.style.display = "none";
+        closeIcon.style.display = "none";
+        sidebarBtn.style.display = "none";
+        nav.classList.remove("nav-open");
+      }
+    </script>
+  </body>
+</html>
