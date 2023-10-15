@@ -43,7 +43,6 @@ const wordCounterHandler = () => {
 
   if (twitterCharactersLeft <= 0) {
     twitterCounter.innerHTML = 0;
-    document.querySelector(".warnings").style.display = "block";
     document.getElementById("warning-heading").innerHTML =
       "Twitter Count Reached!";
     notification();
@@ -51,7 +50,6 @@ const wordCounterHandler = () => {
 
   if (linkedinCharactersLeft <= 0) {
     linkedinCounter.innerHTML = 0;
-    document.querySelector(".warnings").style.display = "block";
     document.getElementById("warning-heading").innerHTML =
       "Linkedin Count Reached!";
     notification();
@@ -60,8 +58,25 @@ const wordCounterHandler = () => {
 
 textAreaElement.addEventListener("input", wordCounterHandler);
 
+let hasNotificationRun = false;
+
 function notification() {
+  if (hasNotificationRun) {
+    return; // Exit the function if it has already run
+  }
+  document.querySelector(".warnings").style.display = "block";
+  const warningsElement = document.querySelector(".warnings");
+  warningsElement.classList.add("fade-in");
+
   setTimeout(() => {
-    document.querySelector(".warnings").style.display = "none";
+    warningsElement.classList.remove("fade-in");
+    warningsElement.classList.add("fade-out");
+
+    // Optional: Remove the 'fade-out' class after animation completes
+    setTimeout(() => {
+      warningsElement.classList.remove("fade-out");
+      document.querySelector(".warnings").style.display = "none";
+    }, 500); // This duration should match the animation duration in CSS
   }, 5000);
+  hasNotificationRun = true; // Set the flag to true after the function runs
 }
