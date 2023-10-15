@@ -84,7 +84,7 @@ body {
   /* border-radius: 20px; */
 }
 
-.warning {
+.warnings {
   text-align: center;
   padding: 30px 0;
   background-color: rgb(255, 26, 26);
@@ -95,8 +95,27 @@ body {
   display: none;
 }
 
-.warning-visible {
-  display: block;
-}
-
 /* Word Counter Styles End  */
+
+/* Responsive  */
+
+@media (max-width: 1100px) {
+  .word-counter-wrapper {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding-bottom: 20px;
+  }
+
+  .word-counter-textarea {
+    width: 100%;
+  }
+
+  .statistics {
+    width: 100%;
+  }
+
+  .stats-heading {
+    font-size: 2vw;
+  }
+}

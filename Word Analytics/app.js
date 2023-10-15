@@ -41,13 +41,27 @@ const wordCounterHandler = () => {
   let linkedinCharactersLeft = 320 - numberOfCharacters;
   linkedinCounter.innerHTML = linkedinCharactersLeft;
 
-  if (twitterCharactersLeft < 0) {
+  if (twitterCharactersLeft <= 0) {
     twitterCounter.innerHTML = 0;
+    document.querySelector(".warnings").style.display = "block";
+    document.getElementById("warning-heading").innerHTML =
+      "Twitter Count Reached!";
+    notification();
   }
 
-  if (linkedinCharactersLeft < 0) {
+  if (linkedinCharactersLeft <= 0) {
     linkedinCounter.innerHTML = 0;
+    document.querySelector(".warnings").style.display = "block";
+    document.getElementById("warning-heading").innerHTML =
+      "Linkedin Count Reached!";
+    notification();
   }
 };
 
 textAreaElement.addEventListener("input", wordCounterHandler);
+
+function notification() {
+  setTimeout(() => {
+    document.querySelector(".warnings").style.display = "none";
+  }, 5000);
+}
