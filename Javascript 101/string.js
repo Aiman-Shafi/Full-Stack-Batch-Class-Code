@@ -85,6 +85,8 @@ let searchForToLowercase = searchFor.toLowerCase();
 //   console.log(searchFor, "is not Found");
 // }
 
+console.log(lowerCaseGivenSentence.indexOf("bab"));
+
 // console.log(givenSentence.indexOf(searchFor));
 
 // let age = "10";

@@ -61,9 +61,9 @@ textAreaElement.addEventListener("input", wordCounterHandler);
 let hasNotificationRun = false;
 
 function notification() {
-  if (hasNotificationRun) {
-    return; // Exit the function if it has already run
-  }
+  // if (hasNotificationRun) {
+  //   return; // Exit the function if it has already run
+  // }
   document.querySelector(".warnings").style.display = "block";
   const warningsElement = document.querySelector(".warnings");
   warningsElement.classList.add("fade-in");
@@ -77,6 +77,6 @@ function notification() {
       warningsElement.classList.remove("fade-out");
       document.querySelector(".warnings").style.display = "none";
     }, 500); // This duration should match the animation duration in CSS
-  }, 5000);
-  hasNotificationRun = true; // Set the flag to true after the function runs
+  }, 2000);
+  // hasNotificationRun = false; // Set the flag to true after the function runs
 }
