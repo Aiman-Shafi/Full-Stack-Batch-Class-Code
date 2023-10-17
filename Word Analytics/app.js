@@ -72,7 +72,7 @@ function notification() {
     warningsElement.classList.remove("fade-in");
     warningsElement.classList.add("fade-out");
 
-    // Optional: Remove the 'fade-out' class after animation completes
+    // Remove the 'fade-out' class after animation completes
     setTimeout(() => {
       warningsElement.classList.remove("fade-out");
       document.querySelector(".warnings").style.display = "none";
