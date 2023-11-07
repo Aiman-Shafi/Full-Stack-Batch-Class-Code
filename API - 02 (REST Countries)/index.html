@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #loader {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="all-countries">
+        <h2>REST Countries V3</h2>
+        <form>
+          <input type="text" placeholder="Search" id="search" />
+          <input type="submit" id="submit" value="Search" />
+        </form>
+        <br />
+        <form>
+          <label for="region">Filter by Region</label>
+          <select name="region" id="region">
+            <option value="all">All</option>
+          </select>
+        </form>
+        <div class="list">
+          <h4>Countries</h4>
+          <img id="loader" src="loader.gif" width="50px" alt="" />
+          <ol id="list">
+            <!-- <li>Bangladesh</li> -->
+          </ol>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

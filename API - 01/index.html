@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .all-posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .post {
+        background-color: beige;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+    <section class="all-posts">
+      <!-- <div class="post">
+        <h5>post ID</h5>
+        <h2>Post Title</h2>
+        <p>Post Paragraph</p>
+      </div> -->
+    </section>
+
+    <script>
+      //Fetch API from JSON placeholder
+      function fetchApi() {
+        fetch("https://randomuser.me/api/?results=10")
+          .then((response) => response.json())
+          .then((users) => displayPosts(users.results));
+      }
+
+      // display posts
+      function displayPosts(users) {
+        console.log(users);
+        // console.log("display posts:", post);
+        users.forEach((user) => {
+          //   console.log(post);
+          let postbody = document.querySelector(".all-posts");
+          postbody.innerHTML += `
+            <div class="post">
+                  <img src=${user.picture.medium}>
+                  <p>${user.name.title} ${user.name.first} ${user.name.last}</p>
+                  <p>${user.email}</p>
+                  <p>${user.location.state}, ${user.location.country}</p>
+                  <p>${user.gender}</p>
+            </div>
+          `;
+        });
+      }
+
+      //   document.querySelector(".all-posts").innerHTML += `
+
+      //       `;
+
+      fetchApi();
+    </script>
+  </body>
+</html>
