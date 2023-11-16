@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  margin: auto;
+  height: 100vh;
+  background-color: red;
+  transition: background-color 0.5s ease;
+}
+
+.burger-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.burger-card {
+  width: 200px;
+  border: 2px solid rgb(199, 199, 199);
+}
+
+.light {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+.dark {
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
