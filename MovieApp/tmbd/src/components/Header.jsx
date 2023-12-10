@@ -11,6 +11,8 @@ function Header() {
         <Link to={"/"}>Home</Link>
         <Link to={"/about"}>About</Link>
         <Link to={"/all-movies"}>Movies</Link>
+        <Link to={"/movie"}>Detail</Link>
+
         {/* <a href="#">Movies</a> */}
       </nav>
     </header>

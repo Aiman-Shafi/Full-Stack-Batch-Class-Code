@@ -12,9 +12,9 @@ function MovieCard({
       ) : (
         <img src="https://placehold.co/400" />
       )}
-      <h4>{original_title.slice(0, 23)}</h4>
+      <h4>{original_title?.slice(0, 23)}</h4>
       <p>{overview.slice(0, 60)}...</p>
-      <Link>View Details</Link>
+      <Link to={`/movie/${id}`}>View Details</Link>
     </div>
   );
 }

@@ -137,3 +137,26 @@ input {
   color: yellowgreen;
   font-size: 20px;
 }
+
+.filter {
+  padding: 20px 0px;
+}
+
+.filter ul li {
+  list-style: none;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
+.filter li:hover {
+  color: yellowgreen;
+  cursor: pointer;
+}
+
+.filter ul {
+  display: flex;
+  text-align: center;
+  gap: 20px;
+  overflow-x: scroll;
+  padding-bottom: 20px;
+}
