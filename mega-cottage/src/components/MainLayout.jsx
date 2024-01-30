@@ -1,19 +1,20 @@
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import "../styles/global.css";
+import { Outlet } from "react-router-dom";
 
 export default function MainLayout() {
   return (
     <>
-      <div className="mainLayout">
-        <div className="sidebar">
-          <Sidebar />
-        </div>
+      <div className="main-layout">
         <div className="navbar">
           <Header />
         </div>
-        <main className="main p-8">
-          <h2>Test</h2>
+        <div className="sidebar">
+          <Sidebar />
+        </div>
+        <main className="main p-10">
+          <Outlet />
         </main>
       </div>
     </>

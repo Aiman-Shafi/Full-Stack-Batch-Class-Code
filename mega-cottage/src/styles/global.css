@@ -1,20 +1,10 @@
-.mainLayout {
+.main-layout {
   display: grid;
   height: 100vh;
   grid-template-rows: 100px auto;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar main ";
+  grid-template-columns: 300px 1fr;
 }
 
 .sidebar {
-  grid-area: sidebar;
-}
-
-.navbar {
-  grid-area: header;
-}
-
-.main {
-  grid-area: main;
+  grid-row: 1/-1;
 }
