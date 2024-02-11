@@ -9,6 +9,7 @@ import Users from "./pages/Users";
 import PageNotFound from "./pages/PageNotFound";
 import Account from "./pages/Account";
 import MainLayout from "./components/MainLayout";
+import { Toaster } from "react-hot-toast";
 
 // imports from tanStack
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -43,6 +44,32 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        gutter={8}
+        containerClassName=""
+        containerStyle={{
+          padding: "30px",
+        }}
+        toastOptions={{
+          // Define default options
+          duration: 5000,
+          style: {
+            background: "#363636",
+            color: "#fff",
+          },
+
+          // Default options for specific types
+          success: {
+            duration: 5000,
+            theme: {
+              primary: "green",
+              secondary: "black",
+            },
+          },
+        }}
+      />
     </QueryClientProvider>
   );
 }

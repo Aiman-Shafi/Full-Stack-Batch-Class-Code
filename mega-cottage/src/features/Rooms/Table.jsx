@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { getRooms } from "../../api/apiRooms";
 import Spinner from "../../components/Spinner";
+import CreateRoomForm from "./CreateRoomForm";
 import TableRow from "./TableRow";
 
 export default function Table() {
@@ -28,7 +29,7 @@ export default function Table() {
       {/*<!-- Component: Responsive Table --> */}
       <table
         className="w-full text-left border border-separate rounded border-slate-200"
-        cellspacing="0"
+        cellSpacing="0"
       >
         <tbody>
           <tr>
@@ -72,6 +73,9 @@ export default function Table() {
         </tbody>
       </table>
       {/*<!-- End Responsive Table --> */}
+      <div className="w-[800px]">
+        <CreateRoomForm />
+      </div>
     </>
   );
 }
