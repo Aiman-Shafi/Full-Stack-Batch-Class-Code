@@ -1,11 +1,12 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { createRoom } from "../../api/apiRooms";
 
 export default function CreateRoomForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit, reset, formState, getValues } = useForm();
+  const { errors } = formState;
 
   const queryClient = useQueryClient();
 
@@ -17,9 +18,9 @@ export default function CreateRoomForm() {
         queryKey: ["rooms"],
       });
     },
-    // onError: (error) => {
-    //   toast.error(error.message);
-    // },
+    onError: (error) => {
+      toast.error(error.message);
+    },
     mutationKey: ["createRooms"],
   });
 
@@ -28,6 +29,10 @@ export default function CreateRoomForm() {
     mutate({ ...data });
     reset();
   }
+
+  useEffect(() => {
+    console.log(errors);
+  }, [errors]);
 
   return (
     <>
@@ -46,12 +51,20 @@ export default function CreateRoomForm() {
             type="text"
             name="name"
             placeholder="your name"
+            disabled={isLoading}
             className="peer input-style"
-            {...register("name")}
+            {...register("name", {
+              required: "Name field is required",
+            })}
           />
           <label htmlFor="name" className="input-label">
             Room Name
           </label>
+          {errors?.name && (
+            <p className="text-sm text-red-500 mt-2 ml-2">
+              {errors.name.message}
+            </p>
+          )}
         </div>
 
         {/* capacity */}
@@ -60,13 +73,25 @@ export default function CreateRoomForm() {
             id="maxCapacity"
             type="number"
             name="maxCapacity"
+            disabled={isLoading}
             placeholder="Max Capacity"
             className="peer input-style"
-            {...register("maxCapacity")}
+            {...register("maxCapacity", {
+              required: "Max Capacity field is required",
+              min: {
+                value: 1,
+                message: "Capacity should be at least 1",
+              },
+            })}
           />
           <label htmlFor="maxCapacity" className="input-label">
             Max Capacity
           </label>
+          {errors?.maxCapacity && (
+            <p className="text-sm text-red-500 mt-2 ml-2">
+              {errors.maxCapacity.message}
+            </p>
+          )}
         </div>
 
         {/* price */}
@@ -74,14 +99,26 @@ export default function CreateRoomForm() {
           <input
             id="regularPrice"
             type="number"
-            name="regularPrice"
+            name=""
+            disabled={isLoading}
             placeholder="Regular Price"
             className="peer input-style"
-            {...register("regularPrice")}
+            {...register("regularPrice", {
+              required: "Price field is required",
+              min: {
+                value: 50,
+                message: "Price should be at $50 or more",
+              },
+            })}
           />
           <label htmlFor="regularPrice" className="input-label">
             Price
           </label>
+          {errors?.regularPrice && (
+            <p className="text-sm text-red-500 mt-2 ml-2">
+              {errors.regularPrice.message}
+            </p>
+          )}
         </div>
 
         {/* discount */}
@@ -90,13 +127,24 @@ export default function CreateRoomForm() {
             id="discount"
             type="number"
             name="discount"
-            placeholder="Max Capacity"
+            placeholder="Discount"
+            disabled={isLoading}
             className="peer input-style"
-            {...register("discount")}
+            {...register("discount", {
+              required: "Discount field is required",
+              validate: (value) =>
+                value <= getValues().regularPrice ||
+                "Discount should be less than Regular Price",
+            })}
           />
           <label htmlFor="discount" className="input-label">
             Discount
           </label>
+          {errors?.discount && (
+            <p className="text-sm text-red-500 mt-2 ml-2">
+              {errors.discount.message}
+            </p>
+          )}
         </div>
 
         {/* image */}
@@ -106,12 +154,17 @@ export default function CreateRoomForm() {
             name="image"
             accept="image/*"
             className="file-input file-input-bordered text-sm file-input-primary w-full max-w-xs"
-            // {...register("image")}
+            {...register("image", { required: "Image is required" })}
           />
 
           {/* <label htmlFor="discount" className="input-label">
             Discount
           </label> */}
+          {errors?.image && (
+            <p className="text-sm text-red-500 mt-2 ml-2">
+              {errors.image.message}
+            </p>
+          )}
         </div>
 
         <div className="relative my-6 flex gap-3">
