@@ -25,14 +25,14 @@ export default function CreateRoomForm() {
   });
 
   function onSubmit(data) {
-    console.log(data);
-    mutate({ ...data });
+    console.log(data, data.image[0]);
+    mutate({ ...data, image: data.image[0] });
     reset();
   }
 
-  useEffect(() => {
-    console.log(errors);
-  }, [errors]);
+  // useEffect(() => {
+  //   console.log(errors);
+  // }, [errors]);
 
   return (
     <>
@@ -133,7 +133,7 @@ export default function CreateRoomForm() {
             {...register("discount", {
               required: "Discount field is required",
               validate: (value) =>
-                value <= getValues().regularPrice ||
+                value <= +getValues().regularPrice ||
                 "Discount should be less than Regular Price",
             })}
           />
@@ -168,10 +168,18 @@ export default function CreateRoomForm() {
         </div>
 
         <div className="relative my-6 flex gap-3">
-          <button type="submit" className="btn btn-primary">
-            Add New Room
+          <button
+            type="submit"
+            className="btn btn-primary"
+            disabled={isLoading}
+          >
+            {isLoading ? "Adding..." : "Add New Room"}
           </button>
-          <button type="reset" className="btn bg-transparent">
+          <button
+            type="reset"
+            className="btn bg-transparent"
+            disabled={isLoading}
+          >
             Cancel
           </button>
         </div>
